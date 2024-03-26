@@ -1,3 +1,16 @@
+
+
+# Introduction
+
+- Server Repo: git@github.com:patfinder/GPTBridge.git
+- App repo: git@github.com:patfinder/GPTBridge-app.git
+
+GPTBridge-app is the accompanying UI app with GPTBridge that support sending prompt to ChatGPT
+and retrive result.
+
+# 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
