@@ -9,8 +9,6 @@ and retrieve result.
 - App repo: git@github.com:patfinder/GPTBridge-app.git
 - Take a look at Readme file of server repo for more info.
 
-# 
-
 
 # Getting Started with Create React App
 
