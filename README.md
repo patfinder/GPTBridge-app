@@ -2,11 +2,12 @@
 
 # Introduction
 
+GPTBridge-app is the accompanying UI app with GPTBridge that support sending prompt to ChatGPT
+and retrieve result.
+
 - Server Repo: git@github.com:patfinder/GPTBridge.git
 - App repo: git@github.com:patfinder/GPTBridge-app.git
-
-GPTBridge-app is the accompanying UI app with GPTBridge that support sending prompt to ChatGPT
-and retrive result.
+- Take a look at Readme file of server repo for more info.
 
 # 
 
