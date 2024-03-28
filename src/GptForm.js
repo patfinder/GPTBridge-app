@@ -10,23 +10,19 @@ function GptForm() {
     const [loading, setLoading] = useState(false);
     const [answer, setAnswer] = useState({ __html: 'Click "Run" to send query.' });
 
-    function doQuery(){
+    function doQuery(event){
+
         setLoading(true);
 
         let host = window.location.host
-        // let host = 'https://7a9c-2607-fea8-4f41-6700-37f0-2de-85d0-61f9.ngrok-free.app'
 
         fetch(`//${host}/?query=${query}`, {mode: 'cors'})
-            .then(resp => resp.text()
-                // {
-                // let parts = "resp".split('\n');
-                // let combine = parts.slice(2).join(' ');
-                // setAnswer(combine);
-                // }
-            )
+            .then(resp => resp.text())
             .then(text => setAnswer({ __html: text }))
             .catch(error => console.log(`Fetch error: ${error}`))
-            .finally(() => setLoading(false))
+            .finally(() => setLoading(false));
+        
+        event.preventDefault();
     }
 
     return (
@@ -35,7 +31,7 @@ function GptForm() {
             <Form.Label>Query</Form.Label>
             <Form.Control placeholder="Enter query" 
                 value={query} onChange={e => setQuery(e.target.value)} />
-            <Button variant="primary" onClick={doQuery}>Run</Button>
+            <Button variant="primary" type="submit" onClick={doQuery}>Run</Button>
             </Form.Group>
     
             <Form.Group className="mb-3" controlId="formBasicPassword">
